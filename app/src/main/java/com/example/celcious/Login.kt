@@ -25,7 +25,7 @@ class Login : AppCompatActivity() {
         val newuserval=findViewById<Button>(R.id.login_signup_button)
         val forgotpassval=findViewById<Button>(R.id.forgot_button_id)
 
-        val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("userpref", MODE_PRIVATE)
         fun isValidEmail(email: String): Boolean {
             return Patterns.EMAIL_ADDRESS.matcher(email).matches()
         }
@@ -43,6 +43,7 @@ class Login : AppCompatActivity() {
                     if(pass.isNotBlank()){
                         if(storedemail==email&&storedpass==pass){
                             val intent=Intent(this,Home::class.java)
+                            startActivity(intent)
                         }else{
                             Toast.makeText(this, "Username or Password is wrong", Toast.LENGTH_SHORT).show()
                         }
@@ -60,6 +61,11 @@ class Login : AppCompatActivity() {
 
         newuserval.setOnClickListener(){
             val intent=Intent(this,signup::class.java)
+            startActivity(intent)
+        }
+
+        forgotpassval.setOnClickListener(){
+            val intent=Intent(this,Home::class.java)
             startActivity(intent)
         }
 
