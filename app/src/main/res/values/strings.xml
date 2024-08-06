@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Celcious</string>
+    <string name="splash_text">°Celsius</string>
+    <string name="greetings">Welcome</string>
+    <string name="Email">E mail</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="olduser">Already a user? Sign Up</string>
+    <string name="newuser">New User? Sign up</string>
+    <string name="signup">Sign up</string>
+    <string name="username">User name</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="city">City</string>
+    <string name="search">Search city</string>
 </resources>
